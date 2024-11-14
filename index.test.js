@@ -15,4 +15,9 @@ describe('Time to words', () => {
     const timeInWords = convertTimeToWords('2:45');
     expect(timeInWords).toBe('quarter to three');
   });
+
+  it('Handles 00 ', () => {
+    const timeInWords = convertTimeToWords('2:00');
+    expect(timeInWords).toBe("two o'clock");
+  });
 });
